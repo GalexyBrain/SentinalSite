@@ -419,14 +419,22 @@ function App() {
             </p>
           </div>
           <CountdownTimer />
+          <div className="max-w-2xl mx-auto text-center fade-up">
+          <a 
+            href="https://forms.google.com/register" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 text-white px-6 sm:px-12 py-4 sm:py-6 rounded-xl text-lg sm:text-2xl font-semibold transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-red-500/20"
+          >
+            Register Now
+            <ExternalLink className="w-5 sm:w-6 sm:h-6" />
+          </a>
         </div>
-        <div className="absolute bottom-4 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" />
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 sm:py-32 px-4 relative cyber-grid">
+      <section id="about" className="py-16 sm:py-32 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent cyber-particles"></div>
         <div className="max-w-4xl mx-auto text-center relative fade-up">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8">About Sentinel Hack 5.0</h2>
@@ -439,7 +447,7 @@ function App() {
       </section>
 
       {/* Prizes Section */}
-      <section id="prizes" className="py-16 sm:py-32 px-4 relative matrix-bg">
+      <section id="prizes" className="py-16 sm:py-32 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent neon-lines"></div>
         <div className="max-w-6xl mx-auto text-center relative">
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-16 fade-up">
@@ -490,14 +498,7 @@ function App() {
       {/* Domains Section */}
       <section 
         id="domains" 
-        className="py-16 sm:py-32 px-4 bg-black/30 relative glitch-bg"
-        onMouseMove={(e) => {
-          const rect = e.currentTarget.getBoundingClientRect();
-          const x = ((e.clientX - rect.left) / rect.width) * 100;
-          const y = ((e.clientY - rect.top) / rect.height) * 100;
-          e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
-          e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
-        }}
+        className="py-16 sm:py-32 px-4 bg-black/30 relative neon-lines" 
       >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-16 fade-up">Domains</h2>
@@ -527,13 +528,13 @@ function App() {
       </section>
 
       {/* Rules Section */}
-      <section id="rules" className="py-16 sm:py-32 px-4">
+      <section id="rules" className="py-16 sm:py-32 px-4 neon-lines">
         <Rules />
       </section>
 
       {/* FAQ Section */}
       <section id="faqs" className="py-16 sm:py-32 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent"></div>
+        <div className="absolute inset-0"></div>
         <div className="max-w-3xl mx-auto relative">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-16 fade-up">FAQs</h2>
           <FAQ />
@@ -541,7 +542,7 @@ function App() {
       </section>
 
       {/* Register Section */}
-      <section id="register" className="py-16 sm:py-32 px-4 bg-gradient-to-b from-black to-red-900/20">
+      <section id="register" className="py-16 sm:py-32 px-4 relative bg-gradient-to-b from-transparent via-red-500/5 to-transparent">
         <div className="max-w-2xl mx-auto text-center fade-up">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8">REGISTER</h2>
           <p className="mb-8 text-gray-300">
@@ -560,7 +561,7 @@ function App() {
       </section>
 
       {/* Sponsors Section */}
-      <section id="sponsors" className="py-16 sm:py-32 px-4 bg-black/30">
+      <section id="sponsors" className="py-16 sm:py-32 px-4 bg-black/30 neon-lines">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-16 fade-up">Our Sponsors</h2>
           <div className="mb-8 sm:mb-20 fade-up">
@@ -629,7 +630,7 @@ function App() {
 
 
       {/* Contact Section */}
-      <section className="py-16 sm:py-32 px-4">
+      <section className="py-16 sm:py-32 px-4 neon-lines">
         <ContactInfo />
       </section>
     </div>
