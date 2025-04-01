@@ -391,6 +391,7 @@ function App() {
       <Header />
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <SectionBackground variant="particles" />
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-radial from-red-500/20 via-transparent to-transparent"></div>
           <img 
