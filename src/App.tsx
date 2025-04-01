@@ -139,7 +139,7 @@ function CountdownTimer() {
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
+  
   const faqs = [
     {
       question: "When and Where?",
@@ -315,7 +315,7 @@ function Header() {
             <div className="absolute inset-0 bg-white backdrop-blur-md rounded-lg"></div>
             <img src="../25yrs.png" alt="25 Years Logo" className="w-16 h-16 sm:w-20 sm:h-20 relative z-10" />
           </div>
-
+          
           {/* Mobile Menu Button */}
           <button 
             className="sm:hidden text-white focus:outline-none"
@@ -324,7 +324,7 @@ function Header() {
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-
+        
         {/* Navigation */}
         <nav
           className={`${
@@ -342,7 +342,7 @@ function Header() {
           ))}
         </nav>
       </div>
-
+      
       {/* Bottom Text */}
       <div className="bg-black/50 py-2 text-center text-xs text-white">
         <p>In Association with Firefox Club & AICTE SPICES | Presents</p>
@@ -350,8 +350,6 @@ function Header() {
     </header>
   );
 }
-
-import SectionBackground from './components/SectionBackground';
 
 function App() {
   useEffect(() => {
@@ -391,14 +389,15 @@ function App() {
       <Header />
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <SectionBackground variant="gradient" />
-        <div className="absolute inset-0 bg-gradient-radial from-red-500/20 via-transparent to-transparent"></div>
-        <img 
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-radial from-red-500/20 via-transparent to-transparent"></div>
+          <img 
             src="../headerbg.png" 
             alt="Background" 
             className="w-full h-full object-cover opacity-75"
             loading="lazy"
           />
+        </div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center space-y-8 sm:space-y-12 px-4 max-w-6xl mx-auto">
         <div className="animate-float relative">
@@ -427,8 +426,7 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
-        <SectionBackground variant="morph" intensity="high" />
+      <section id="about" className="py-16 sm:py-32 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent"></div>
         <div className="max-w-4xl mx-auto text-center relative fade-up">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8">About Sentinel Hack 5.0</h2>
@@ -490,8 +488,7 @@ function App() {
       </section>
 
       {/* Domains Section */}
-      <section id="domains" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
-        <SectionBackground variant="particles" />
+      <section id="domains" className="py-16 sm:py-32 px-4 bg-black/30 relative">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-16 fade-up">Domains</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
@@ -520,14 +517,12 @@ function App() {
       </section>
 
       {/* Rules Section */}
-      <section id="rules" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
-        <SectionBackground variant="particles" />
+      <section id="rules" className="py-16 sm:py-32 px-4">
         <Rules />
       </section>
 
       {/* FAQ Section */}
-      <section id="faqs" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
-        <SectionBackground variant="particles" color="white" />
+      <section id="faqs" className="py-16 sm:py-32 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent"></div>
         <div className="max-w-3xl mx-auto relative">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-16 fade-up">FAQs</h2>
@@ -579,7 +574,7 @@ function App() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
               {[
                 { name: "CloudSys", logo: "https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=200" },
-                { name: "DevTech", logo: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=200" },
+                { name: "DevTech", logo: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=200" },
                 { name: "NetCore", logo: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&w=200" },
               ].map((sponsor, index) => (
                 <div key={index} className="p-4 sm:p-8 bg-gradient-to-br from-yellow-500/5 to-black rounded-xl border border-yellow-500/20 hover:border-yellow-500/40 transition-all group">
