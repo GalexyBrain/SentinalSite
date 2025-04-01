@@ -426,8 +426,8 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 sm:py-32 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent"></div>
+      <section id="about" className="py-16 sm:py-32 px-4 relative cyber-grid">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent cyber-particles"></div>
         <div className="max-w-4xl mx-auto text-center relative fade-up">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8">About Sentinel Hack 5.0</h2>
           <p className="text-base sm:text-xl text-gray-300 leading-relaxed">
@@ -439,8 +439,8 @@ function App() {
       </section>
 
       {/* Prizes Section */}
-      <section id="prizes" className="py-16 sm:py-32 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent"></div>
+      <section id="prizes" className="py-16 sm:py-32 px-4 relative matrix-bg">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent neon-lines"></div>
         <div className="max-w-6xl mx-auto text-center relative">
           <h2 className="text-3xl sm:text-5xl font-bold mb-8 sm:mb-16 fade-up">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-red-400 to-red-600">
@@ -488,7 +488,7 @@ function App() {
       </section>
 
       {/* Domains Section */}
-      <section id="domains" className="py-16 sm:py-32 px-4 bg-black/30 relative">
+      <section id="domains" className="py-16 sm:py-32 px-4 bg-black/30 relative glitch-bg">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-16 fade-up">Domains</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
