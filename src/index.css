@@ -62,21 +62,31 @@
   100% { transform: translateX(50%); }
 }
 
-/* Glitch effect */
+/* Interactive mouse glow effect */
 .glitch-bg {
   position: relative;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+    rgba(255, 0, 0, 0.15) 0%,
+    rgba(255, 0, 0, 0.05) 25%,
+    transparent 50%);
+  transition: background 0.3s ease;
 }
 
-.glitch-bg::after {
+.glitch-bg::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0.1), transparent 70%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  animation: glitchEffect 4s infinite linear alternate;
+  inset: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(255, 0, 0, 0.1) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(transparent 0%, rgba(255, 0, 0, 0.1) 1px, transparent 1px) 0 0 / 40px 40px;
+  animation: gridPulse 3s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes gridPulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; }
 }
 
 @keyframes glitchEffect {

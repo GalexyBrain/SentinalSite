@@ -488,7 +488,17 @@ function App() {
       </section>
 
       {/* Domains Section */}
-      <section id="domains" className="py-16 sm:py-32 px-4 bg-black/30 relative glitch-bg">
+      <section 
+        id="domains" 
+        className="py-16 sm:py-32 px-4 bg-black/30 relative glitch-bg"
+        onMouseMove={(e) => {
+          const rect = e.currentTarget.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width) * 100;
+          const y = ((e.clientY - rect.top) / rect.height) * 100;
+          e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
+          e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
+        }}
+      >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-16 fade-up">Domains</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
