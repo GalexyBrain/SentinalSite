@@ -388,7 +388,7 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-black to-gray-900 text-white scroll-smooth">
       <Header />
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="pt-20 relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-radial from-red-500/20 via-transparent to-transparent"></div>
           <img 
