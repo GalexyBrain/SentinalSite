@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+  50% { text-shadow: 0 0 30px rgba(239, 68, 68, 0.8); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes prize-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px 10px rgba(239, 68, 68, 0); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 8s linear infinite;
+}
+
+.animate-prize-pulse {
+  animation: prize-pulse 2s ease-in-out infinite;
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ef4444;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+.prize-card {
+  @apply relative overflow-hidden backdrop-blur-lg;
+}
+
+.prize-card::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-br opacity-30;
+}
+
+.prize-card::after {
+  content: '';
+  @apply absolute inset-0 bg-black/20 backdrop-blur-sm;
+}
+
+.prize-content {
+  @apply relative z-10;
+}
+
+.prize-first {
+  @apply animate-prize-pulse;
+}
+
+.prize-first::before {
+  background: linear-gradient(135deg, #ffd700, #ff6b6b);
+}
+
+.prize-second::before {
+  background: linear-gradient(135deg, #c0c0c0, #a5a5a5);
+}
+
+.prize-third::before {
+  background: linear-gradient(135deg, #cd7f32, #b36a3a);
+}
