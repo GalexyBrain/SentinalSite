@@ -351,6 +351,8 @@ function Header() {
   );
 }
 
+import SectionBackground from './components/SectionBackground';
+
 function App() {
   useEffect(() => {
     // Inject custom CSS for animations
@@ -426,7 +428,8 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 sm:py-32 px-4 relative">
+      <section id="about" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
+        <SectionBackground variant="dots" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent"></div>
         <div className="max-w-4xl mx-auto text-center relative fade-up">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8">About Sentinel Hack 5.0</h2>
@@ -488,7 +491,8 @@ function App() {
       </section>
 
       {/* Domains Section */}
-      <section id="domains" className="py-16 sm:py-32 px-4 bg-black/30 relative">
+      <section id="domains" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
+        <SectionBackground variant="circuit" />
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-16 fade-up">Domains</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
@@ -517,12 +521,14 @@ function App() {
       </section>
 
       {/* Rules Section */}
-      <section id="rules" className="py-16 sm:py-32 px-4">
+      <section id="rules" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
+        <SectionBackground variant="grid" />
         <Rules />
       </section>
 
       {/* FAQ Section */}
-      <section id="faqs" className="py-16 sm:py-32 px-4 relative">
+      <section id="faqs" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
+        <SectionBackground variant="dots" color="white" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent"></div>
         <div className="max-w-3xl mx-auto relative">
           <h2 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-16 fade-up">FAQs</h2>
