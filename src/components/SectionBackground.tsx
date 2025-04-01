@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 
 interface Props {
-  variant?: 'gradient' | 'grid' | 'dots';
+  variant?: 'gradient' | 'grid' | 'dots' | 'morph';
   color?: string;
+  intensity?: 'low' | 'medium' | 'high';
 }
 
 export default function SectionBackground({ variant = 'gradient', color = 'red' }: Props) {
@@ -66,6 +67,27 @@ export default function SectionBackground({ variant = 'gradient', color = 'red' 
   }
 
   const baseColor = color === 'red' ? 'rgba(239, 68, 68, 0.05)' : 'rgba(255, 255, 255, 0.05)';
+
+  if (variant === 'morph') {
+    return (
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 via-transparent to-black/30" />
+        <div className="absolute inset-0" style={{
+          background: `
+            radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 0% 0%, rgba(239, 68, 68, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 100% 0%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 0% 100%, rgba(239, 68, 68, 0.05) 0%, transparent 50%),
+            radial-gradient(circle at 100% 100%, rgba(0, 0, 0, 0.1) 0%, transparent 50%)
+          `,
+          filter: 'blur(80px)',
+          opacity: 0.7,
+          animation: 'morphBackground 20s ease-in-out infinite'
+        }} />
+        <div className="absolute inset-0 backdrop-blur-[100px]" />
+      </div>
+    );
+  }
 
   switch (variant) {
     case 'dots':

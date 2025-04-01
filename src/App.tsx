@@ -428,7 +428,7 @@ function App() {
 
       {/* About Section */}
       <section id="about" className="py-16 sm:py-32 px-4 relative border-t border-b border-red-500/20">
-        <SectionBackground variant="particles" />
+        <SectionBackground variant="morph" intensity="high" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent"></div>
         <div className="max-w-4xl mx-auto text-center relative fade-up">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4 sm:mb-8">About Sentinel Hack 5.0</h2>
